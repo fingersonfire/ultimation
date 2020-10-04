@@ -1,0 +1,11 @@
+{
+    "tmp": {
+        "suite": "Debug",
+        "tests": [
+            {
+                "name": "test case 1",
+                "status": "pass"
+            }
+        ]
+    }
+}
