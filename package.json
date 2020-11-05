@@ -5,13 +5,18 @@
   "main": "index.js",
   "author": "Stone River",
   "license": "MIT",
-  "devDependencies": {
+  "scripts": {
+    "server": "nodemon --exec babel-node ./server/server.js",
+    "test": "npx babel-node ./tests/debug.spec.js",
+    "crons": "nodemon --exec babel-node ./system/cron/runner.js"
+  },
+  "dependencies": {
     "@babel/core": "^7.10.3",
     "@babel/node": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
+    "cron": "^1.8.2",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.4",
     "selenium-standalone": "^6.17.0"
-  },
-  "scripts": {
-    "start": "npx babel-node ./tests/debug.spec.js"
   }
 }
