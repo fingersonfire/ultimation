@@ -1,4 +1,7 @@
 {
+    "endpoints": {
+        "meh": "https://api.meh.com/1/current.json?apikey="
+    },
     "tmp": {
         "suite": "Debug",
         "tests": [
