@@ -1,13 +1,8 @@
-import { API, File, Test } from '../index';
+import { API, DATA, File, Test } from '../index';
 
-const file = './reports/data.json';
-const json = { name: 'First Last', age: '32' }
+async function main() {
+    const response = await API.get(`${DATA.endpoints.meh}${process.env.MEH_AUTH}`);
+    console.log(response.data.title);
+}
 
-Test.Suite('Suite', () => {
-
-    Test.Case('Test Case', () => {
-        const res = API.get('https://ifconfig.me');
-        console.log(res);
-    });
-
-});
+main();
