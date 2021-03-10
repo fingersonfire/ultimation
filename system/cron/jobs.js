@@ -13,7 +13,7 @@ export const mehNotifier = new Cron.CronJob(
             },
             {
                 username: 'MehBot',
-                content: `${productInfo.data.deal.title}`
+                content: `[${productInfo.data.deal.title}](${productInfo.data.deal.url})`
             }
         );
     },
