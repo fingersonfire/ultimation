@@ -1,13 +1,14 @@
-import { Routes, Query, URL } from './index';
+export function tasks() {
+    
+}
 
-export default function requestListener(req, res) {
-    switch (URL.parse(req.URL)) {
-        case '/tasks':
-            
-            break;
-        default:
-            res.writeHead(404);
-            res.end('error: "Resource not found"');
-            break;
-    }
+/**
+ * 
+ * @param {req} req - Request object
+ * @param {res} res - Response object
+ * @param {funciton} handler - Funciton to handle data recieved from request
+ * @param {function} callback - Function to run on completion
+ */
+function _handlePost(req, res, handler, callback) {
+
 }
