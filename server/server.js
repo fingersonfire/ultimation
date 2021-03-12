@@ -1,11 +1,15 @@
 import HTTP from 'http';
-import Routes from './routes';
+import listener from './listener';
 
-const host = 'localhost';
-const port = '8080';
+function main() {
+    const host = 'localhost', port = '4242';
+    const server = HTTP.createServer(listener);
 
-const server = HTTP.createServer(Routes);
+    server.listen(port, host, () => {
+        console.log(`Server is running on http://${host}:${port}`);
+    });
 
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
-});
+    // TODO: Add close server call in nodemon config end
+}
+
+main();
