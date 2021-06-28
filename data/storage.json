@@ -1,5 +1,1 @@
-{
-    "endpoints": {
-        "meh": "https://api.meh.com/1/current.json?apikey="
-    }
-}
+{"productstock":[{"product":"Radeon RX 6700 XT","inStock":false},{"product":"Radeon RX 6800","inStock":false}]}
