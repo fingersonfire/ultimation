@@ -1,4 +1,4 @@
-import { API, DATA, Web } from '../../index';
+import { API, DATA, File, Web } from '../../index';
 import Cron from 'cron';
 
 export const dailyMeme = new Cron.CronJob(
@@ -71,6 +71,7 @@ export const graphicsCheck = new Cron.CronJob(
         
                     if(oosIndicator == null && !stock.inStock) {
         
+                        page.screenshot({ path: 'graphicsCardStock.png' });
                         await discordMsg('debug', `The ${p.product} is in stock: ${p.link}`);
                         updateStock(true);
         
